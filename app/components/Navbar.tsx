@@ -42,7 +42,7 @@ export const Navbar = () => {
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Button className="rounded-full flex justify-center font-bold">
+            <Button size={"sm"} className="rounded-full flex justify-center font-bold">
               Sign Up
             </Button>
           </NavigationMenuItem>
