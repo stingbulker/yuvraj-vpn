@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { CirclePlay } from "lucide-react";
@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -17,39 +18,39 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { vt } from "../fonts";
+import { useCallback, useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 const countries = [
-  {
-    country: "India",
-    flag: "/india.png",
-  },
-  {
-    country: "USA",
-    flag: "/usa.png",
-  },
-  {
-    country: "Canada",
-    flag: "/canada.png",
-  },
-  {
-    country: "Singapore",
-    flag: "/singapore.png",
-  },
-  {
-    country: "Japan",
-    flag: "/japan.png",
-  },
-  {
-    country: "China",
-    flag: "/china.png",
-  },
-  {
-    country: "UK",
-    flag: "/uk.png",
-  },
+  "India",
+  "USA",
+  "Canada",
+  "Singapore",
+  "UK",
+  "Japan",
+  "China",
+  "Russia",
+  "Netherlands",
+  "France",
 ];
 
 export default function Header() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [currentSlide, setCurrentSlide] = useState(3);
+
+  const logSlidesInView = useCallback((emblaApi: any) => {
+    const slides = emblaApi.slidesInView();
+    console.log(slides);
+    console.log("current slide", slides[Math.round((slides.length - 1) / 2)]);
+    setCurrentSlide(slides[Math.round((slides.length - 1) / 2)] - 1);
+  }, []);
+
+  useEffect(() => {
+    if (api) {
+      api.on("slidesInView", logSlidesInView);
+    }
+  }, [api]);
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-20">
       {/* <div className="w-[75vw] h-[75vw] rounded-full bg-neutral-900 border-solid border-2 border-neutral-800"></div> */}
@@ -81,16 +82,28 @@ export default function Header() {
       <div className="flex w-full">
         <Carousel
           className="w-full"
+          opts={{
+            align: "start",
+          }}
+          setApi={setApi}
           plugins={[
-            // Autoplay({
-            //   delay: 4000,
-            // }),
+            Autoplay({
+              delay: 5000,
+            }),
           ]}
         >
-          <CarouselContent className="w-full">
+          <CarouselContent className="select-none">
             {countries.map((country, index) => (
-              <CarouselItem key={index} className="w-[1/7]">
-                <Card>
+              <CarouselItem
+                key={index}
+                className="basis-[14.28%] aspect-square"
+              >
+                <Card
+                  className={cn(
+                    `w-full h-full bg-neutral-800`,
+                    currentSlide === index && "bg-accent text-black"
+                  )}
+                >
                   <CardHeader>
                     <div className="flex">
                       <div className="w-10 h-10 bg-neutral-300 rounded-full"></div>
@@ -98,7 +111,8 @@ export default function Header() {
                   </CardHeader>
                   <CardFooter className="flex flex-col gap-2">
                     <p>Location</p>
-                    <p className={`${vt.className} text-4xl`}>{country.country}</p>
+                    <p className={`${vt.className} text-4xl`}>{country}</p>
+                    <p>{currentSlide == index && "current"}</p>
                   </CardFooter>
                 </Card>
               </CarouselItem>
