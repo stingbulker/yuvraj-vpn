@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} tracking-tighter antialiased`}
+        className={`${poppins.className} text-foreground overflow-x-hidden tracking-tighter antialiased`}
       >
         {children}
       </body>

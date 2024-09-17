@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { CirclePlay } from "lucide-react";
+import { CirclePlay, Ellipsis } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -53,13 +53,20 @@ export default function Header() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-20">
-      {/* <div className="w-[75vw] h-[75vw] rounded-full bg-neutral-900 border-solid border-2 border-neutral-800"></div> */}
-      <div className="flex flex-col items-center gap-8">
+      <div className="absolute top-40 w-[65vw] h-[65vw] flex items-center justify-center rounded-full bg-white/[1%] border border-white/5 backdrop-blur">
+        <div className="w-[45vw] h-[45vw] flex items-center justify-center rounded-full bg-white/[1%] border border-white/5">
+          <div className="w-[25vw] h-[25vw] rounded-full bg-white/[1%] border border-white/5"></div>
+        </div>
+      </div>
+      <div className="absolute top-32 -left-32 rotate-12 blur-3xl rounded-full w-[50rem] h-24 bg-white/10"></div>
+      <div className="absolute top-[30rem] -left-32 rotate-12 blur-3xl rounded-full w-[75rem] h-24 bg-white/15"></div>
+      <div className="absolute top-32 -right-32 -rotate-12 blur-3xl rounded-full w-[50rem] h-24 bg-white/10"></div>
+      <div className="relative flex flex-col items-center gap-8">
         <div className="flex flex-col items-center">
           <h1 className="text-8xl ">Ultimate Online Privacy</h1>
           <h1 className="text-8xl text-neutral-500 ">with Our VPN</h1>
         </div>
-        <div className="flex flex-col items-center text-neutral-500">
+        <div className="flex flex-col items-center text-neutral-500 text-xl">
           <p>
             Safeguard your data, access global content, and enjoy fast, secure
           </p>
@@ -79,7 +86,7 @@ export default function Header() {
           </Button>
         </div>
       </div>
-      <div className="flex w-full">
+      <div className="relative top-14 flex w-full">
         <Carousel
           className="w-full"
           opts={{
@@ -96,23 +103,39 @@ export default function Header() {
             {countries.map((country, index) => (
               <CarouselItem
                 key={index}
-                className="basis-[14.28%] aspect-square"
+                className="basis-[14.28%] aspect-square p-4"
               >
                 <Card
                   className={cn(
-                    `w-full h-full bg-neutral-800`,
-                    currentSlide === index && "bg-accent text-black"
+                    `w-full h-full bg-white/[3%] backdrop-blur-sm flex flex-col justify-between`,
+                    currentSlide === index &&
+                      "bg-accent text-black font-semibold"
                   )}
                 >
                   <CardHeader>
-                    <div className="flex">
-                      <div className="w-10 h-10 bg-neutral-300 rounded-full"></div>
+                    <div className="flex items-center justify-between">
+                      <div
+                        className="w-10 h-10 rounded-full bg-cover bg-center"
+                        style={{
+                          backgroundImage: `url("http://localhost:3000/${country}.png")`,
+                        }}
+                      ></div>
+                      {currentSlide === index ? (
+                        <div className="flex items-center gap-1 bg-black/15 px-2 rounded-xl">
+                          <span className="text-green-500">•</span>
+                          <span className="font-medium">Connect</span>
+                        </div>
+                      ) : (
+                        <Ellipsis />
+                      )}
                     </div>
                   </CardHeader>
-                  <CardFooter className="flex flex-col gap-2">
-                    <p>Location</p>
-                    <p className={`${vt.className} text-4xl`}>{country}</p>
-                    <p>{currentSlide == index && "current"}</p>
+                  <CardFooter className="items-start flex flex-col leading-3">
+                    <span>Location</span>
+                    <span className={`${vt.className} text-4xl`}>
+                      {country}
+                    </span>
+                    <span>{currentSlide == index && ""}</span>
                   </CardFooter>
                 </Card>
               </CarouselItem>
