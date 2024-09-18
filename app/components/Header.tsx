@@ -64,9 +64,9 @@ export default function Header() {
       <div className="relative flex flex-col items-center gap-8">
         <div className="flex flex-col items-center">
           <h1 className="text-8xl ">Ultimate Online Privacy</h1>
-          <h1 className="text-8xl text-neutral-500 ">with Our VPN</h1>
+          <h1 className="text-8xl text-secondary-foreground ">with Our VPN</h1>
         </div>
-        <div className="flex flex-col items-center text-neutral-500 text-xl">
+        <div className="flex flex-col items-center text-secondary-foreground text-xl">
           <p>
             Safeguard your data, access global content, and enjoy fast, secure
           </p>
