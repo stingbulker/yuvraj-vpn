@@ -53,9 +53,9 @@ export default function Header() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-20">
-      <div className="absolute top-40 w-[65vw] h-[65vw] flex items-center justify-center rounded-full bg-white/[1%] border border-white/5 backdrop-blur">
-        <div className="w-[45vw] h-[45vw] flex items-center justify-center rounded-full bg-white/[1%] border border-white/5">
-          <div className="w-[25vw] h-[25vw] rounded-full bg-white/[1%] border border-white/5"></div>
+      <div className="absolute top-40 w-[65vw] h-[65vw] flex items-center justify-center rounded-full glass">
+        <div className="w-[45vw] h-[45vw] flex items-center justify-center rounded-full glass">
+          <div className="w-[25vw] h-[25vw] rounded-full glass"></div>
         </div>
       </div>
       <div className="absolute top-32 -left-32 rotate-12 blur-3xl rounded-full w-[50rem] h-24 bg-white/10"></div>
@@ -107,9 +107,9 @@ export default function Header() {
               >
                 <Card
                   className={cn(
-                    `w-full h-full bg-white/[3%] backdrop-blur-sm flex flex-col justify-between`,
+                    `w-full h-full glass flex flex-col justify-between`,
                     currentSlide === index &&
-                      "bg-accent text-black font-semibold"
+                      "!bg-accent text-black font-semibold"
                   )}
                 >
                   <CardHeader>

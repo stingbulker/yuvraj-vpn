@@ -10,7 +10,7 @@ import Image from "next/image";
 export const Navbar = () => {
   return (
     <div className="flex justify-center sticky z-50 top-6">
-      <NavigationMenu className="flex w-full py-1 px-1 rounded-full bg-secondary border  border-white/5 ">
+      <NavigationMenu className="flex w-full py-1 px-1 rounded-full glass">
         <NavigationMenuList className="flex gap-6">
           <NavigationMenuItem className="flex justify-center">
             <NavigationMenuLink
