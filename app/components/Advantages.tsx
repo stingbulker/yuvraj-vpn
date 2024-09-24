@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
+import { Globe, ShieldCheck } from "lucide-react";
 import React from "react";
 import { vt } from "../fonts";
 
@@ -44,29 +44,29 @@ const Advantages = () => {
               </div>
             </div>
           </div>
-            <div className="bg-accent w-1/2 absolute aspect-square rounded-full -bottom-52 -right-32 blur-[96px] opacity-20"></div>
+          <div className="bg-accent w-1/2 absolute aspect-square rounded-full -bottom-52 -right-32 blur-[96px] opacity-20"></div>
         </div>
         <div className="w-full h-5/6 p-6 overflow-hidden glass rounded-[1.25rem] flex justify-center items-center">
           <div className="relative w-full overflow-hidden h-full glass rounded-[1.25rem] p-8 flex justify-between">
             <div className="glass absolute -top-24 -left-24 w-2/5 aspect-square flex justify-center items-center rounded-full">
               <div className="glass absolute w-4/6 aspect-square flex justify-center items-center rounded-full">
                 <div className="bg-accent aspect-square w-min p-7 rounded-full flex justify-center items-center">
-                  <Globe color="#000" size={40} strokeWidth={1.5} />
+                  <ShieldCheck color="#000" size={40} strokeWidth={1.5} />
                 </div>
               </div>
             </div>
 
             <div className="self-end relative z-30">
               <div className={`${vt.className} tracking-wide text-7xl`}>
-                Many Networks
+                Secure Connection
               </div>
               <div className="flex flex-col text-xl pr-8 text-secondary-foreground tracking-tight">
-                Enjoy the flexibility of connecting to numerous global networks
-                and enhanced online privacy
+                Ensure your online activities & personal data remain private and
+                protected from cyber threats
               </div>
             </div>
           </div>
-            <div className="bg-accent w-1/2 absolute aspect-square rounded-full -bottom-52 -right-32 blur-[96px] opacity-20"></div>
+          <div className="bg-accent w-1/2 absolute aspect-square rounded-full -bottom-52 -right-32 blur-[96px] opacity-20"></div>
         </div>
       </div>
     </div>
