@@ -9,7 +9,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <Advantages />
-      <Preview/>
+      <Preview />
     </div>
   );
 }

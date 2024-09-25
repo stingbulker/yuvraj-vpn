@@ -1,6 +1,6 @@
-import { VT323 } from 'next/font/google'
- 
+import { VT323 } from "next/font/google";
+
 export const vt = VT323({
-  weight: ['400'],
-  subsets: ["latin"]
-})
+  weight: ["400"],
+  subsets: ["latin"],
+});

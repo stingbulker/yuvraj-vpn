@@ -9,13 +9,13 @@ import Image from "next/image";
 
 export const Navbar = () => {
   return (
-    <div className="flex justify-center sticky z-50 top-6">
-      <NavigationMenu className="flex w-full py-1 px-1 rounded-full glass">
+    <div className="sticky top-6 z-50 flex justify-center">
+      <NavigationMenu className="glass flex w-full rounded-full px-1 py-1">
         <NavigationMenuList className="flex gap-6">
           <NavigationMenuItem className="flex justify-center">
             <NavigationMenuLink
               href="/"
-              className="flex gap-2 items-center justify-center px-3"
+              className="flex items-center justify-center gap-2 px-3"
             >
               <Image src="/v.svg" width={25} height={25} alt="" />
               Vaguard
@@ -27,22 +27,25 @@ export const Navbar = () => {
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/" className="text-neutral-500 ">
+            <NavigationMenuLink href="/" className="text-neutral-500">
               About Us
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/" className="text-neutral-500 ">
+            <NavigationMenuLink href="/" className="text-neutral-500">
               Features
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink href="/" className="text-neutral-500 ">
+            <NavigationMenuLink href="/" className="text-neutral-500">
               Pricing
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Button size={"sm"} className="rounded-full flex justify-center font-bold">
+            <Button
+              size={"sm"}
+              className="flex justify-center rounded-full font-bold"
+            >
               Sign Up
             </Button>
           </NavigationMenuItem>
