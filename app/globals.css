@@ -47,4 +47,7 @@
   .glass {
     @apply border border-white/5 !bg-white/[1%] backdrop-blur;
   }
+  .inverted {
+    @apply !bg-white !text-black;
+  }
 }

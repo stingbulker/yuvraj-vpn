@@ -2,11 +2,22 @@
 
 import React from "react";
 import { vt } from "../fonts";
-import { BatteryFull, ChevronLeft, Signal, Wifi } from "lucide-react";
+import {
+  BatteryFull,
+  ChevronLeft,
+  Ellipsis,
+  Home,
+  Power,
+  Settings,
+  Signal,
+  Wifi,
+} from "lucide-react";
 import { type ChartConfig } from "@/components/ui/chart";
 import { Bar, BarChart, XAxis } from "recharts";
 import { ChartContainer } from "@/components/ui/chart";
 import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+import { Card, CardFooter, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const chartConfig = {
   usage: {
@@ -93,7 +104,7 @@ const Preview = () => {
         </div>
       </div>
       <div className="glass absolute right-[43rem] top-24 aspect-[9/18] w-[27rem] rounded-[3rem] p-3">
-        <div className="relative flex h-full w-full flex-col rounded-[3rem] bg-background px-6 py-4">
+        <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[3rem] bg-background px-6 py-4">
           <div className="flex w-full items-center justify-between">
             9:41
             <div className="ml-12 rounded-full border border-white/30 px-14 py-4"></div>
@@ -103,8 +114,101 @@ const Preview = () => {
               <BatteryFull />
             </div>
           </div>
-          <div id="mobileContent" className="flex flex-col justify-between"></div>
-          {/* <div className="h-3 w-36 self-center rounded-full bg-white"></div> */}
+          <div
+            id="mobileContent"
+            className="relative flex h-full flex-col justify-between"
+          >
+            <div id="mobileHeader" className="mt-4 text-5xl">
+              Connect to Network
+              <div className="text-secondary-foreground">Netherlands</div>
+            </div>
+            <div className="absolute left-4 top-24 flex aspect-square w-11/12 items-center justify-center rounded-full border border-white/10">
+              <div className="absolute h-full w-full rounded-full bg-accent opacity-15 blur-3xl"></div>
+              <div className="absolute flex aspect-square w-4/6 items-center justify-center rounded-full border border-white/10">
+                <div className="flex aspect-square w-min items-center justify-center rounded-full border border-white/10 p-7">
+                  <Power size={50} strokeWidth={2} />
+                </div>
+              </div>
+            </div>
+            <div id="mobileFooter" className="flex flex-col">
+              <div className="flex items-center justify-between py-6">
+                <div className="flex flex-col">
+                  <div className="text-secondary-foreground">Connecting</div>
+                  Time
+                </div>
+                <div className={`${vt.className} text-6xl tracking-normal`}>
+                  00:02:36
+                </div>
+              </div>
+              <div id="cards" className="relative right-[50%] flex gap-4">
+                <Card
+                  className={`flex aspect-square h-56 flex-col justify-between bg-background`}
+                >
+                  <CardHeader className="flex items-end">
+                    <Ellipsis />
+                  </CardHeader>
+                </Card>
+                <Card
+                  className={`flex aspect-square h-56 flex-col justify-between bg-accent text-black`}
+                >
+                  <CardHeader className="flex justify-between">
+                    <div className="flex items-center justify-between">
+                      <div
+                        className="h-10 w-10 rounded-full bg-cover bg-center"
+                        style={{
+                          backgroundImage: `url("http://localhost:3000/Netherlands.png")`,
+                        }}
+                      ></div>
+                      <div className="flex items-center gap-1 rounded-xl bg-black/15 px-2">
+                        <span className="text-green-500">•</span>
+                        <span className="font-medium">Connect</span>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardFooter className="flex flex-col items-start leading-3">
+                    <span>Location</span>
+                    <span className={`${vt.className} text-4xl`}>
+                      Netherlands
+                    </span>
+                  </CardFooter>
+                </Card>
+                <Card
+                  className={`flex aspect-square h-56 flex-col justify-between bg-background`}
+                >
+                  <CardHeader className="flex justify-between">
+                    <div className="flex items-center justify-between">
+                      <div
+                        className="h-10 w-10 rounded-full bg-cover bg-center"
+                        style={{
+                          backgroundImage: `url("http://localhost:3000/France.png")`,
+                        }}
+                      ></div>
+                      <div className="flex items-center gap-1 rounded-xl bg-black/15 px-2">
+                        <span className="text-green-500">•</span>
+                        <span className="font-medium">Connect</span>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardFooter className="flex flex-col items-start leading-3">
+                    <span>Location</span>
+                    <span className={`${vt.className} text-4xl`}>France</span>
+                  </CardFooter>
+                </Card>
+              </div>
+              <div id="badges" className="flex justify-between py-6">
+                <Badge className="inverted gap-1 px-4 py-3">
+                  <Home />
+                  Home
+                </Badge>
+                <Badge className="px-4 py-3">Search</Badge>
+                <Badge className="px-4 py-3">Speed</Badge>
+                <Badge className="px-4 py-3">
+                  <Settings />
+                </Badge>
+              </div>
+              <div className="h-[5px] w-36 self-center rounded-full bg-white"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

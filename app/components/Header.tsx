@@ -135,7 +135,6 @@ export default function Header() {
                     <span className={`${vt.className} text-4xl`}>
                       {country}
                     </span>
-                    <span>{currentSlide == index && ""}</span>
                   </CardFooter>
                 </Card>
               </CarouselItem>
