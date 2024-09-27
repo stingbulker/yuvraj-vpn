@@ -3,6 +3,7 @@ import Features from "./components/Features";
 import Header from "./components/Header";
 import { Navbar } from "./components/Navbar";
 import Preview from "./components/Preview";
+import Pricing from "./components/Pricing";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Advantages />
       <Preview />
       <Features />
+      <Pricing/>
     </div>
   );
 }
