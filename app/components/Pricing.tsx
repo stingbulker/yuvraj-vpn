@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Shield, ShieldCheck, ShieldHalf } from "lucide-react";
 import React from "react";
 
 const Pricing = () => {
@@ -21,10 +22,22 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-      <div id="pricingCards" className="flex gap-8 h-2/3 w-full">
-        <div className="glass h-full w-1/3 rounded-2xl"></div>
-        <div className="glass h-full w-1/3 rounded-2xl"></div>
-        <div className="glass h-full w-1/3 rounded-2xl"></div>
+      <div id="pricingCards" className="flex h-2/3 w-full gap-8">
+        <div className="glass h-full w-1/3 rounded-2xl">
+          <Badge className="rounded-xl border-accent/30">
+            <Shield color="hsl(65 100% 52%)" />
+          </Badge>
+        </div>
+        <div className="glass h-full w-1/3 rounded-2xl">
+          <Badge className="rounded-xl border-accent/30">
+            <ShieldHalf color="hsl(65 100% 52%) p-29 i-498" />
+          </Badge>
+        </div>
+        <div className="glass h-full w-1/3 rounded-2xl">
+          <Badge className="rounded-xl border-accent/30">
+            <ShieldCheck color="hsl(65 100% 52%)" />
+          </Badge>
+        </div>
       </div>
     </div>
   );
