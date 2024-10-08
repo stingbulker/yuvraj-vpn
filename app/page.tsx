@@ -1,5 +1,6 @@
 import Advantages from "./components/Advantages";
 import Features from "./components/Features";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { Navbar } from "./components/Navbar";
 import Preview from "./components/Preview";
@@ -13,7 +14,8 @@ export default function Home() {
       <Advantages />
       <Preview />
       <Features />
-      <Pricing/>
+      <Pricing />
+      <Footer />
     </div>
   );
 }
