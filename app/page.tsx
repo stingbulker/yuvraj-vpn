@@ -8,7 +8,7 @@ import Pricing from "./components/Pricing";
 
 export default function Home() {
   return (
-    <div className="h-[700vh] bg-background">
+    <div className="bg-background">
       <Navbar />
       <Header />
       <Advantages />
