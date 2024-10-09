@@ -17,7 +17,7 @@ const Features = () => {
         <div className="flex flex-col gap-8">
           <div className="mr-28 flex flex-col gap-6 pb-8">
             <div className="flex items-center gap-4">
-              <Badge className="rounded-xl border-accent/30">
+              <Badge className="rounded-xl !inner-shadow border-accent/30">
                 <Rocket color="hsl(65 100% 52%)" />
               </Badge>
               <div
