@@ -5,7 +5,7 @@ import { vt } from "../fonts";
 
 const Features = () => {
   return (
-    <div className="flex h-screen w-full justify-between px-64 py-28">
+    <div className="flex h-screen w-full justify-between px-64 py-[3%]">
       <div id="featuresDetail" className="flex w-1/2 flex-col justify-between">
         <div className="flex flex-col gap-6">
           <Badge className="w-max">Our Features</Badge>
@@ -17,7 +17,7 @@ const Features = () => {
         <div className="flex flex-col gap-8">
           <div className="mr-28 flex flex-col gap-6 pb-8">
             <div className="flex items-center gap-4">
-              <Badge className="rounded-xl !inner-shadow border-accent/30">
+              <Badge className="!inner-shadow rounded-xl border-accent/30">
                 <Rocket color="hsl(65 100% 52%)" />
               </Badge>
               <div
@@ -31,7 +31,7 @@ const Features = () => {
               integrated VPN speed test tool, ensuring you get the most out of
               your online experience
             </div>
-            <div className="w-full flex relative top-3">
+            <div className="relative top-3 flex w-full">
               <div className="h-[1px] w-[75%] bg-accent"></div>
               <div className="h-[1px] w-[35%] bg-white/10"></div>
             </div>
@@ -70,15 +70,17 @@ const Features = () => {
       </div>
       <div
         id="featuresCard"
-        className="glass aspect-[9/18] w-2/5 rounded-[3rem] p-3"
+        className="glass h-full aspect-[3/4] ws-[40rem] rounded-[3rem] p-3"
       >
-        <div className="flex h-full w-full flex-col rounded-[3rem] bg-background px-6 py-4">
-          <div className="flex flex-col justify-center items-center w-full h-2/5">
+        <div className="absolute flex h-full w-full flex-col rounded-[3rem] bg-background px-6 py-4">
+          <div className="flex h-2/5 w-full flex-col items-center justify-center">
             <div className="text-2xl font-light">Uploading</div>
-            <div className={`${vt.className} text-9xl tracking-normal`}>62.5</div>
-            <Badge className="border-none py-2 px-4">MB/s</Badge>
+            <div className={`${vt.className} text-9xl tracking-normal`}>
+              62.5
+            </div>
+            <Badge className="border-none px-4 py-2">MB/s</Badge>
           </div>
-          {/* <div className="relative right-1/2 top-1/4 w-[200%] h-[200%] bg-gray-700 overflow-hidden"></div> */}
+          <div className="absolute aspect-square right-1/2 top-1/4 w-[200%] bg-primary/[3%] rounded-full"></div>
         </div>
       </div>
     </div>

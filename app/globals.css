@@ -51,6 +51,6 @@
     @apply !bg-white !text-black;
   }
   .inner-shadow {
-    box-shadow: inset hsla(65, 100%, 52%, 0.2) -10px -10px 20px -10px; 
+    box-shadow: inset #ebff0a33 -10px -10px 20px -10px; 
   }  
 }

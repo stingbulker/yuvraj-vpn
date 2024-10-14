@@ -37,13 +37,13 @@ const chartData = [
 
 const Preview = () => {
   return (
-    <div className="relative flex h-screen w-full items-center">
+    <div className="relative flex h-screen w-full">
       <div
         className={`${vt.className} text-center text-[25rem] leading-[0.75] tracking-widest text-secondary-foreground/35`}
       >
         Preview Our Platform
       </div>
-      <div className="glass absolute bottom-24 left-[43rem] aspect-[9/18] w-[27rem] rounded-[3rem] p-3">
+      <div className="glass absolute bottom-24 left-1/4 aspect-[9/18] w-[27rem] rounded-[3rem] p-3">
         <div className="relative flex h-full w-full flex-col rounded-[3rem] bg-background px-6 py-4">
           <div className="flex w-full items-center justify-between">
             9:41
@@ -103,7 +103,7 @@ const Preview = () => {
           <div className="h-3 w-36 self-center rounded-full bg-white"></div>
         </div>
       </div>
-      <div className="glass absolute right-[43rem] top-24 aspect-[9/18] w-[27rem] rounded-[3rem] p-3">
+      <div className="glass absolute right-1/4 top-24 aspect-[9/18] w-[27rem] rounded-[3rem] p-3">
         <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[3rem] bg-background px-6 py-4">
           <div className="flex w-full items-center justify-between">
             9:41
