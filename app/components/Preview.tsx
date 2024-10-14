@@ -155,7 +155,7 @@ const Preview = () => {
                       <div
                         className="h-10 w-10 rounded-full bg-cover bg-center"
                         style={{
-                          backgroundImage: `url("http://localhost:3000/Netherlands.png")`,
+                          backgroundImage: `url("${process.env.NEXT_PUBLIC_SITE_URL}/Netherlands.png")`,
                         }}
                       ></div>
                       <div className="flex items-center gap-1 rounded-xl bg-black/15 px-2">
@@ -179,7 +179,7 @@ const Preview = () => {
                       <div
                         className="h-10 w-10 rounded-full bg-cover bg-center"
                         style={{
-                          backgroundImage: `url("http://localhost:3000/France.png")`,
+                          backgroundImage: `url("${process.env.NEXT_PUBLIC_SITE_URL}/France.png")`,
                         }}
                       ></div>
                       <div className="flex items-center gap-1 rounded-xl bg-black/15 px-2">

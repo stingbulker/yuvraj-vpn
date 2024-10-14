@@ -34,43 +34,43 @@ const Footer = () => {
           <div
             className="absolute left-[71%] top-[39%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("http://localhost:3000/India.png")`,
+              backgroundImage: `url("${process.env.NEXT_PUBLIC_SITE_URL}/India.png")`,
             }}
           ></div>
           <div
             className="absolute left-[71%] top-[15%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("http://localhost:3000/Russia.png")`,
+              backgroundImage: `url("${process.env.NEXT_PUBLIC_SITE_URL}/Russia.png")`,
             }}
           ></div>
           <div
             className="absolute left-[79%] top-[33%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("http://localhost:3000/China.png")`,
+              backgroundImage: `url("${process.env.NEXT_PUBLIC_SITE_URL}/China.png")`,
             }}
           ></div>
           <div
             className="absolute left-[18%] top-[28%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("http://localhost:3000/USA.png")`,
+              backgroundImage: `url("${process.env.NEXT_PUBLIC_SITE_URL}/USA.png")`,
             }}
           ></div>
           <div
             className="absolute left-[25%] top-[20%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("http://localhost:3000/Canada.png")`,
+              backgroundImage: `url("${process.env.NEXT_PUBLIC_SITE_URL}/Canada.png")`,
             }}
           ></div>
           <div
             className="absolute left-[80%] top-[49%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("http://localhost:3000/Singapore.png")`,
+              backgroundImage: `url("${process.env.NEXT_PUBLIC_SITE_URL}/Singapore.png")`,
             }}
           ></div>
           <div
             className="absolute left-[88%] top-[30%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
-              backgroundImage: `url("http://localhost:3000/Japan.png")`,
+              backgroundImage: `url("${process.env.NEXT_PUBLIC_SITE_URL}/Japan.png")`,
             }}
           ></div>
         </div>

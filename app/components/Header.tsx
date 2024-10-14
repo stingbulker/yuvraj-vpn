@@ -120,7 +120,7 @@ export default function Header() {
                       <div
                         className="h-10 w-10 rounded-full bg-cover bg-center"
                         style={{
-                          backgroundImage: `url("http://localhost:3000/${country}.png")`,
+                          backgroundImage: `url("${process.env.NEXT_PUBLIC_SITE_URL}/${country}.png")`,
                         }}
                       ></div>
                       {currentSlide === index ? (
