@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CirclePlay, Ellipsis } from "lucide-react";
 import {
@@ -62,10 +63,15 @@ export default function Header() {
       <div className="absolute -left-32 top-[30rem] h-24 w-[75rem] rotate-12 rounded-full bg-white/15 blur-3xl"></div>
       <div className="absolute -right-32 top-32 h-24 w-[50rem] -rotate-12 rounded-full bg-white/10 blur-3xl"></div>
       <div className="relative flex flex-col items-center gap-8">
-        <div className="flex flex-col items-center">
+        <motion.div
+          className="flex flex-col items-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeIn" }}
+        >
           <h1 className="text-8xl">Ultimate Online Privacy</h1>
           <h1 className="text-8xl text-secondary-foreground">with Our VPN</h1>
-        </div>
+        </motion.div>
         <div className="flex flex-col items-center text-xl text-secondary-foreground">
           <p>
             Safeguard your data, access global content, and enjoy fast, secure
