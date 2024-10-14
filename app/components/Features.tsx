@@ -70,9 +70,9 @@ const Features = () => {
       </div>
       <div
         id="featuresCard"
-        className="glass h-full aspect-[3/4] ws-[40rem] rounded-[3rem] p-3"
+        className="glass ws-[40rem] aspect-[3/4] h-full rounded-[3rem] p-3"
       >
-        <div className="absolute flex h-full w-full flex-col rounded-[3rem] bg-background px-6 py-4">
+        <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[3rem] bg-background px-6 py-4">
           <div className="flex h-2/5 w-full flex-col items-center justify-center">
             <div className="text-2xl font-light">Uploading</div>
             <div className={`${vt.className} text-9xl tracking-normal`}>
@@ -80,7 +80,12 @@ const Features = () => {
             </div>
             <Badge className="border-none px-4 py-2">MB/s</Badge>
           </div>
-          <div className="absolute aspect-square right-1/2 top-1/4 w-[200%] bg-primary/[3%] rounded-full"></div>
+          <div className="bg-clip bg-strips absolute -left-[16%] top-[0%] aspect-square h-[100%] bg-primary/[5%]">
+            <div className="absolute right-[66.99%] top-[30%] aspect-square w-1/2 rounded-[2rem] bg-accent"></div>
+            <div className="absolute right-[60%] top-[63.9%] h-[5.5rem] w-1/2 rotate-[-30deg] rounded-[1.5rem] bg-accent"></div>
+          </div>
+          <div className="bg-clip absolute -left-[10%] top-[14%] aspect-square h-[90%] bg-background"></div>
+          <div className="bg-clip absolute -left-[6.9%] top-[19.5%] aspect-square h-[85%] bg-primary/[5%]"></div>
         </div>
       </div>
     </div>
