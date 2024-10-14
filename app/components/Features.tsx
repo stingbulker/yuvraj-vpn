@@ -27,7 +27,7 @@ const Features = () => {
               </div>
             </div>
             <div className="text-xl text-secondary-foreground">
-              Evaluate your internet connection's performance and speed with our
+              Evaluate your internet connection&apos;s performance and speed with our
               integrated VPN speed test tool, ensuring you get the most out of
               your online experience
             </div>
@@ -46,7 +46,7 @@ const Features = () => {
               </div>
             </div>
             <div className="text-xl text-secondary-foreground">
-              Access detailed historical data on your network's performance to
+              Access detailed historical data on your network&apos;s performance to
               monitor trends and optimize usage, enabling you to make informed
               decisions for better connectivity
             </div>

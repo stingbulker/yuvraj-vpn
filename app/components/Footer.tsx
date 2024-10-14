@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="relative h-screen w-full">
       <div className="absolute z-10 flex h-full w-full flex-col items-center justify-between bg-background/40 pt-20">
         <div className="flex w-full flex-col items-center gap-10 bg-gradient-to-b from-background to-background/5 pb-20">
-          <Badge className="w-max">Let's Start Now</Badge>
+          <Badge className="w-max">Let&apos;s Start Now</Badge>
           <div className="text-center text-7xl">
             Protect Your Privacy, Start
             <div className="text-secondary-foreground">Using Our VPN</div>

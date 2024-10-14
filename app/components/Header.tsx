@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { CirclePlay, Ellipsis } from "lucide-react";
 import {
   Card,
-  CardContent,
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
@@ -14,8 +13,6 @@ import {
   CarouselApi,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { vt } from "../fonts";
@@ -50,7 +47,7 @@ export default function Header() {
     if (api) {
       api.on("slidesInView", logSlidesInView);
     }
-  }, [api]);
+  }, [api, logSlidesInView]);
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-20">

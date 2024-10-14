@@ -15,7 +15,6 @@ import {
 import { type ChartConfig } from "@/components/ui/chart";
 import { Bar, BarChart, XAxis } from "recharts";
 import { ChartContainer } from "@/components/ui/chart";
-import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
