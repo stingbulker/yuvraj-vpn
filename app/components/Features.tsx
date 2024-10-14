@@ -73,10 +73,12 @@ const Features = () => {
         className="glass ws-[40rem] aspect-[3/4] h-full rounded-[3rem] p-3"
       >
         <div className="relative flex h-full w-full flex-col overflow-hidden rounded-[3rem] bg-background px-6 py-4">
-        <div className="absolute -top-1/4 right-[2%] aspect-square w-full rounded-full bg-accent opacity-15 blur-3xl z-20"></div>
+          <div className="absolute -top-1/4 right-[2%] z-20 aspect-square w-full rounded-full bg-accent opacity-15 blur-3xl"></div>
           <div className="flex h-2/5 w-full flex-col items-center justify-center">
             <div className="text-3xl font-extralight">Uploading</div>
-            <div className={`${vt.className} text-[12rem] leading-none tracking-normal`}>
+            <div
+              className={`${vt.className} text-[12rem] leading-none tracking-normal`}
+            >
               62.5
             </div>
             <Badge className="border-none px-6 py-2 text-3xl">MB/s</Badge>
@@ -88,7 +90,7 @@ const Features = () => {
           <div className="bg-clip absolute -left-[10%] top-[14%] aspect-square h-[90%] bg-background"></div>
           <div className="bg-clip absolute -left-[6.9%] top-[19.5%] aspect-square h-[85%] bg-primary/[5%]">
             <div className="absolute left-1/2 h-full w-[0.5px] bg-white/10"></div>
-            <div className="absolute bottom-[23.9%] left-[40%] aspect-square w-1/5 rounded-full border border-white/10 bg-[#26262c] flex justify-center items-center">
+            <div className="absolute bottom-[23.9%] left-[40%] flex aspect-square w-1/5 items-center justify-center rounded-full border border-white/10 bg-[#26262c]">
               <RotateCcw size={75} strokeWidth={1} />
             </div>
             <div className="absolute bottom-[10%] flex w-full justify-between px-[20%]">

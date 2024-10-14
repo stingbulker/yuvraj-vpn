@@ -6,7 +6,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="relative h-screen w-full">
-      <div className="absolute z-10 flex h-full w-full flex-col items-center justify-between pt-20 bg-background/40">
+      <div className="absolute z-10 flex h-full w-full flex-col items-center justify-between bg-background/40 pt-20">
         <div className="flex w-full flex-col items-center gap-10 bg-gradient-to-b from-background to-background/5 pb-20">
           <Badge className="w-max">Let's Start Now</Badge>
           <div className="text-center text-7xl">
@@ -32,43 +32,43 @@ const Footer = () => {
       <div className="absolute left-[12%] top-[20%] flex h-4/5 w-9/12 items-center justify-center">
         <div className="absolute h-full w-full">
           <div
-            className="absolute z-30 top-[39%] left-[71%] h-10 w-10 rounded-full bg-cover bg-center"
+            className="absolute left-[71%] top-[39%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
               backgroundImage: `url("http://localhost:3000/India.png")`,
             }}
           ></div>
           <div
-            className="absolute z-30 top-[15%] left-[71%] h-10 w-10 rounded-full bg-cover bg-center"
+            className="absolute left-[71%] top-[15%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
               backgroundImage: `url("http://localhost:3000/Russia.png")`,
             }}
           ></div>
           <div
-            className="absolute z-30 top-[33%] left-[79%] h-10 w-10 rounded-full bg-cover bg-center"
+            className="absolute left-[79%] top-[33%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
               backgroundImage: `url("http://localhost:3000/China.png")`,
             }}
           ></div>
           <div
-            className="absolute z-30 top-[28%] left-[18%] h-10 w-10 rounded-full bg-cover bg-center"
+            className="absolute left-[18%] top-[28%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
               backgroundImage: `url("http://localhost:3000/USA.png")`,
             }}
           ></div>
           <div
-            className="absolute z-30 top-[20%] left-[25%] h-10 w-10 rounded-full bg-cover bg-center"
+            className="absolute left-[25%] top-[20%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
               backgroundImage: `url("http://localhost:3000/Canada.png")`,
             }}
           ></div>
           <div
-            className="absolute z-30 top-[49%] left-[80%] h-10 w-10 rounded-full bg-cover bg-center"
+            className="absolute left-[80%] top-[49%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
               backgroundImage: `url("http://localhost:3000/Singapore.png")`,
             }}
           ></div>
           <div
-            className="absolute z-30 top-[30%] left-[88%] h-10 w-10 rounded-full bg-cover bg-center"
+            className="absolute left-[88%] top-[30%] z-30 h-10 w-10 rounded-full bg-cover bg-center"
             style={{
               backgroundImage: `url("http://localhost:3000/Japan.png")`,
             }}
